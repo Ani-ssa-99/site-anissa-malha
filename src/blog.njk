@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/
+eyebrow: Blog
+heading: "Idées, coulisses et *retours d'expérience*."
+lead: "Ce que j'apprends sur le terrain, en marketing digital et en gestion de projet."
+---
+{% include "page-hero.njk" %}
+<section class="band"><div class="wrap">
+  {% if collections.articles.length %}
+  <div class="posts">
+    {% for post in collections.articles %}
+    <a class="post-card rv" href="{{ post.url }}">
+      <div class="cover{% if post.data.image %} has-img{% endif %}">{% if post.data.image %}<img src="{{ post.data.image }}" alt="">{% else %}{{ post.data.title }}{% endif %}</div>
+      <div class="body">
+        <time datetime="{{ post.date.toISOString() }}">{{ post.date | dateFr }}</time>
+        <h3>{{ post.data.title }}</h3>
+        {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">Les premiers articles arrivent bientôt.</p>
+  {% endif %}
+</div></section>

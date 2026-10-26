@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<header class="page-hero dark">
+  <div class="blob b1"></div>
+  <div class="wrap">
+    <div class="eyebrow">Blog · <time datetime="{{ page.date.toISOString() }}">{{ page.date | dateFr }}</time></div>
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="intro">{{ description }}</p>{% endif %}
+  </div>
+</header>
+<section class="band"><div class="wrap">
+  <article class="prose">
+    {% if image %}<p><img src="{{ image }}" alt=""></p>{% endif %}
+    {{ content | safe }}
+    <a class="back" href="/blog/">← Tous les articles</a>
+  </article>
+</div></section>

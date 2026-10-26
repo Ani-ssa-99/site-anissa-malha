@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% if title %}{{ title }} · {% endif %}{{ site.prenom }} {{ site.nom }}, {{ site.metier }}</title>
+<meta name="description" content="{{ description or site.intro }}">
+<meta property="og:title" content="{{ title or (site.prenom + ' ' + site.nom) }}">
+<meta property="og:description" content="{{ description or site.intro }}">
+<meta property="og:image" content="{{ site.photo }}">
+<link rel="icon" type="image/png" href="/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="topbar">✦ {{ site.bandeau }} ✦</div>
+<nav class="nav" aria-label="Menu principal"><div class="wrap" style="position:relative">
+  <a class="brand" href="/" aria-label="{{ site.prenom }} {{ site.nom }}, accueil">
+    <img src="/assets/img/logo.svg" alt="" width="48" height="48">
+    <span><b>{{ site.prenom }} {{ site.nom }}</b><small>Marketing digital</small></span>
+  </a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="links">Menu</button>
+  <div class="links" id="links">
+    {% set menu = [["Accueil","/"],["Blog","/blog/"],["Cours","/cours/"],["Astuces","/astuces/"]] %}
+    {% for item in menu %}<a href="{{ item[1] }}"{% if page.url == item[1] %} aria-current="page"{% endif %}>{{ item[0] }}</a>{% endfor %}
+    <a class="pill solid" href="/contact/">Me contacter →</a>
+  </div>
+</div></nav>
+
+<main id="contenu">
+{{ content | safe }}
+</main>
+
+<footer class="footer"><div class="wrap">
+  <div class="cta">
+    <h2>{{ site.pied_titre | accent | safe }}</h2>
+    <div class="ctas">
+      <a class="pill solid" href="/contact/">✉ M'écrire</a>
+      <a class="pill ghost" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="cols">
+    <div>
+      <div class="name">{{ site.prenom }} <em>{{ site.nom }}</em></div>
+      <p>{{ site.pied_texte }}</p>
+    </div>
+    <div>
+      <div class="label">Explorer</div>
+      <p><a href="/">Accueil</a><br><a href="/blog/">Blog</a><br><a href="/cours/">Cours</a><br><a href="/astuces/">Astuces</a><br><a href="/contact/">Contact</a></p>
+    </div>
+    <div>
+      <div class="label">Contact</div>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a><br>{{ site.ville }}<br>{{ site.langues }}</p>
+    </div>
+  </div>
+  <div class="legal"><span>© {{ "" | year }} {{ site.prenom }} {{ site.nom }} · {{ site.ville }}</span><a href="#contenu">Retour en haut ↑</a></div>
+</div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

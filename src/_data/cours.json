@@ -1,0 +1,48 @@
+{
+  "titre": "Apprends le marketing *qui marche*.",
+  "intro": "Des formations courtes et concrètes, pensées pour les entrepreneurs, indépendants et petites équipes qui veulent des résultats.",
+  "formations": [
+    {
+      "niveau": "Débutant",
+      "titre": "Réseaux sociaux qui convertissent",
+      "description": "Passe de « je poste quand j'ai le temps » à une vraie stratégie.",
+      "points": [
+        "Choisir ses réseaux",
+        "Construire un calendrier éditorial",
+        "Mesurer ce qui compte"
+      ],
+      "duree": "3 h",
+      "prix": "à définir",
+      "lien_paiement": "",
+      "mis_en_avant": false
+    },
+    {
+      "niveau": "Le plus demandé",
+      "titre": "Lancer sa marque en ligne",
+      "description": "Toutes les étapes pour lancer une marque ou une boutique sans s'éparpiller.",
+      "points": [
+        "Positionnement et cible",
+        "Identité et boutique en ligne",
+        "Plan de lancement sur 90 jours"
+      ],
+      "duree": "2 × 3 h",
+      "prix": "à définir",
+      "lien_paiement": "",
+      "mis_en_avant": true
+    },
+    {
+      "niveau": "Intermédiaire",
+      "titre": "Piloter un projet marketing",
+      "description": "La méthode que j'utilise pour mener un projet du brief au bilan.",
+      "points": [
+        "Du brief au rétroplanning",
+        "Budget et prestataires",
+        "KPI et bilan"
+      ],
+      "duree": "3 h",
+      "prix": "à définir",
+      "lien_paiement": "",
+      "mis_en_avant": false
+    }
+  ]
+}

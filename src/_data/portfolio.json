@@ -1,0 +1,27 @@
+{
+  "titre": "Des marques que j'ai *fait vivre*.",
+  "projets": [
+    {
+      "nom": "Sila",
+      "type": "E-commerce · Shopify",
+      "description": "Création de la boutique en ligne, de l'univers de marque à la fiche produit.",
+      "lien": "https://sila-fes.myshopify.com/",
+      "tags": [
+        "Branding",
+        "Shopify",
+        "Contenu"
+      ]
+    },
+    {
+      "nom": "Acha Company",
+      "type": "Site vitrine",
+      "description": "Identité, site web et présence en ligne d'une entreprise.",
+      "lien": "https://www.acha-company.fr",
+      "tags": [
+        "Web",
+        "Stratégie",
+        "Communication"
+      ]
+    }
+  ]
+}

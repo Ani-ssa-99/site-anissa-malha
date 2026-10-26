@@ -1,0 +1,145 @@
+# Espace d'administration du site (Decap CMS)
+# Dépôt GitHub du site
+backend:
+  name: github
+  repo: Ani-ssa-99/site-anissa-malha
+  branch: main
+  commit_messages:
+    create: "Ajout de {{collection}} « {{slug}} »"
+    update: "Modification de {{collection}} « {{slug}} »"
+    delete: "Suppression de {{collection}} « {{slug}} »"
+    uploadMedia: "Ajout de l'image « {{path}} »"
+    deleteMedia: "Suppression de l'image « {{path}} »"
+
+locale: fr
+site_url: https://anissa-malha.netlify.app
+display_url: https://anissa-malha.netlify.app
+logo_url: /assets/img/logo.svg
+media_folder: src/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Article
+    folder: src/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    sortable_fields: [date, title]
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Date de publication, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: Résumé (affiché dans la liste), name: description, widget: text, required: false }
+      - { label: Image de couverture, name: image, widget: image, required: false }
+      - { label: Article, name: body, widget: markdown }
+
+  - name: pages
+    label: Contenu des pages
+    files:
+      - name: site
+        label: Accueil et infos générales
+        file: src/_data/site.json
+        fields:
+          - { label: Prénom, name: prenom, widget: string }
+          - { label: Nom, name: nom, widget: string }
+          - { label: Métier, name: metier, widget: string }
+          - { label: Ville, name: ville, widget: string }
+          - { label: Bandeau tout en haut du site, name: bandeau, widget: string }
+          - { label: Pastille verte près de la photo, name: badge_disponible, widget: string, required: false, hint: "Laisse vide pour la masquer" }
+          - { label: Pastille terracotta près de la photo, name: badge_lieu, widget: string, required: false }
+          - { label: Photo, name: photo, widget: image }
+          - { label: Début de la phrase animée, name: phrase_debut, widget: string }
+          - { label: Mots qui s'écrivent tout seuls, name: mots_animes, widget: list, field: { label: Mot, name: mot, widget: string } }
+          - { label: Texte d'introduction, name: intro, widget: text }
+          - { label: Texte qui tourne autour de la photo, name: texte_cercle, widget: string, hint: "Garde environ la même longueur pour que le cercle reste complet" }
+          - { label: Compétences du bandeau défilant, name: competences, widget: list, field: { label: Compétence, name: competence, widget: string } }
+          - { label: Titre « À propos », name: apropos_titre, widget: string, hint: "Mets un mot entre *étoiles* pour l'écrire en italique couleur" }
+          - { label: Texte « À propos », name: apropos_texte, widget: text }
+          - label: Chiffres qui comptent
+            name: chiffres
+            widget: list
+            summary: "{{fields.avant}}{{fields.nombre}}{{fields.apres}} · {{fields.legende}}"
+            fields:
+              - { label: Texte avant le chiffre, name: avant, widget: string, required: false, hint: "Par exemple Bac+" }
+              - { label: Chiffre, name: nombre, widget: number, value_type: int }
+              - { label: Texte après le chiffre, name: apres, widget: string, required: false, hint: "Par exemple % ou +" }
+              - { label: Légende, name: legende, widget: string }
+          - { label: Langues, name: langues, widget: string }
+          - { label: E-mail, name: email, widget: string }
+          - { label: Lien LinkedIn, name: linkedin, widget: string }
+          - { label: Grand titre du pied de page, name: pied_titre, widget: string, hint: "Mets un mot entre *étoiles* pour l'écrire en italique couleur" }
+          - { label: Texte du pied de page, name: pied_texte, widget: text }
+
+      - name: parcours
+        label: Parcours et formation
+        file: src/_data/parcours.json
+        fields:
+          - { label: Titre, name: titre, widget: string }
+          - label: Expériences
+            name: postes
+            widget: list
+            summary: "{{fields.dates}} · {{fields.poste}}"
+            fields:
+              - { label: Dates, name: dates, widget: string }
+              - { label: Poste, name: poste, widget: string }
+              - { label: Entreprise et ville, name: entreprise, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+          - label: Formations
+            name: formations
+            widget: list
+            summary: "{{fields.dates}} · {{fields.diplome}}"
+            fields:
+              - { label: Dates, name: dates, widget: string }
+              - { label: Diplôme, name: diplome, widget: string }
+              - { label: École, name: ecole, widget: string }
+
+      - name: portfolio
+        label: Portfolio
+        file: src/_data/portfolio.json
+        fields:
+          - { label: Titre, name: titre, widget: string }
+          - label: Projets
+            name: projets
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { label: Nom, name: nom, widget: string }
+              - { label: Type de projet, name: type, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Lien, name: lien, widget: string }
+              - { label: Mots-clés, name: tags, widget: list, required: false }
+
+      - name: cours
+        label: Cours
+        file: src/_data/cours.json
+        fields:
+          - { label: Titre, name: titre, widget: string }
+          - { label: Introduction, name: intro, widget: text }
+          - label: Formations
+            name: formations
+            widget: list
+            summary: "{{fields.titre}} · {{fields.prix}}"
+            fields:
+              - { label: Niveau, name: niveau, widget: string }
+              - { label: Titre, name: titre, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Points du programme, name: points, widget: list, required: false }
+              - { label: Durée, name: duree, widget: string, required: false }
+              - { label: Prix, name: prix, widget: string, hint: "Par exemple 49 €" }
+              - { label: Lien de paiement (Stripe, Gumroad…), name: lien_paiement, widget: string, required: false, hint: "Si vide, le bouton « Je réserve » mène au formulaire de contact" }
+              - { label: Mettre en avant (carte sombre), name: mis_en_avant, widget: boolean, default: false }
+
+      - name: astuces
+        label: Astuces
+        file: src/_data/astuces.json
+        fields:
+          - { label: Titre, name: titre, widget: string }
+          - { label: Introduction, name: intro, widget: text }
+          - label: Astuces
+            name: astuces
+            widget: list
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: Titre, name: titre, widget: string }
+              - { label: Texte, name: texte, widget: text }

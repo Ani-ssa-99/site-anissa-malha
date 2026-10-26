@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Astuces
+permalink: /astuces/
+eyebrow: Astuces marketing
+---
+{% set heading = astuces.titre %}{% set lead = astuces.intro %}
+{% include "page-hero.njk" %}
+<section class="band"><div class="wrap">
+  <div class="tips">
+    {% for a in astuces.astuces %}
+    <article class="tip rv"><h3>{{ a.titre }}</h3><p>{{ a.texte }}</p></article>
+    {% endfor %}
+  </div>
+</div></section>

@@ -1,0 +1,57 @@
+{
+  "titre": "Du terrain à la *stratégie*.",
+  "postes": [
+    {
+      "dates": "2025 – 2026",
+      "poste": "Brand & Digital Marketing Manager",
+      "entreprise": "Artkan · Lille",
+      "description": "Image de marque, contenus et acquisition digitale."
+    },
+    {
+      "dates": "2023 – 2025",
+      "poste": "Cheffe de projet marketing",
+      "entreprise": "MedSpa Laboratoires · Paris",
+      "description": "Lancements produits, campagnes social media et e-commerce, en alternance."
+    },
+    {
+      "dates": "2022 – 2023",
+      "poste": "Responsable marketing & communication",
+      "entreprise": "Beroli · Paris",
+      "description": "Plan de communication, réseaux sociaux et supports de marque."
+    },
+    {
+      "dates": "2022",
+      "poste": "Manager unité marchande",
+      "entreprise": "Monoprix",
+      "description": "Merchandising, gestion du rayon et animation d'équipe."
+    },
+    {
+      "dates": "2020 – 2021",
+      "poste": "Conseillère commerciale BtoB",
+      "entreprise": "Eurocom Business Services · Lille",
+      "description": "Prospection, négociation et suivi de portefeuille clients."
+    }
+  ],
+  "formations": [
+    {
+      "dates": "2023 – 2025",
+      "diplome": "Master ICD",
+      "ecole": "IGENSIA"
+    },
+    {
+      "dates": "2022 – 2023",
+      "diplome": "Bachelor",
+      "ecole": "CFA CODIS"
+    },
+    {
+      "dates": "2021 – 2022",
+      "diplome": "Bac+2",
+      "ecole": "ADIP"
+    },
+    {
+      "dates": "2020 – 2021",
+      "diplome": "Bac Pro",
+      "ecole": "Opus"
+    }
+  ]
+}

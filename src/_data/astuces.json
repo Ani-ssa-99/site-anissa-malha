@@ -1,0 +1,30 @@
+{
+  "titre": "Petites astuces, *gros effets*.",
+  "intro": "Des conseils concrets que j'applique au quotidien. Pique ce qui t'est utile.",
+  "astuces": [
+    {
+      "titre": "Une cible, un message",
+      "texte": "Avant chaque campagne, écris en une phrase à qui tu parles et ce que tu veux qu'il fasse. Si tu n'y arrives pas, le brief n'est pas prêt."
+    },
+    {
+      "titre": "La règle des 3 secondes",
+      "texte": "Sur les réseaux, ton visuel et ta première ligne doivent donner envie de s'arrêter en moins de 3 secondes. Le reste vient après."
+    },
+    {
+      "titre": "Recycle tes contenus",
+      "texte": "Un article de blog peut devenir un carrousel, une vidéo courte, une newsletter et trois stories. Produis moins, diffuse mieux."
+    },
+    {
+      "titre": "Suis 3 chiffres, pas 30",
+      "texte": "Choisis trois indicateurs liés à ton objectif (ventes, prospects, inscriptions) et regarde-les chaque semaine. Le reste est du bruit."
+    },
+    {
+      "titre": "Teste avant d'investir",
+      "texte": "Avant de mettre un gros budget, teste deux versions d'une annonce avec un petit montant. Garde la gagnante, coupe l'autre."
+    },
+    {
+      "titre": "Le rétroplanning sauve tout",
+      "texte": "Pars de la date de lancement et remonte le temps : chaque étape a une date limite et un responsable. Fini les rushs de dernière minute."
+    }
+  ]
+}

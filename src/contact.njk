@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Contact
+permalink: /contact/
+---
+<section class="band dark" style="padding-top:clamp(56px,8vw,96px)"><div class="wrap contact">
+  <div>
+    <div class="eyebrow">Contact</div>
+    <h1 class="h2" style="font-size:clamp(40px,6vw,72px)">{{ site.pied_titre | accent | safe }}</h1>
+    <p class="intro">Une offre de CDI, une mission ou un cours à réserver : je te réponds sous 48 h.</p>
+    <div class="mail"><a href="mailto:{{ site.email }}">{{ site.email }}</a><button type="button" id="copy" data-email="{{ site.email }}">Copier</button></div>
+    <p class="meta">{{ site.ville }} · {{ site.langues }}<br><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+  </div>
+  <form class="card" name="contact" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="hidden"><label>Ne pas remplir <input name="bot-field"></label></p>
+    <label for="f-name">Nom<input id="f-name" name="nom" autocomplete="name" required></label>
+    <label for="f-mail">E-mail<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-obj">Objet<select id="f-obj" name="objet"><option>Offre d'emploi (CDI)</option><option>Mission freelance</option><option>Réserver un cours</option><option>Autre</option></select></label>
+    <label for="f-msg">Message<textarea id="f-msg" name="message" required></textarea></label>
+    <button class="pill solid" type="submit" style="justify-self:start">Envoyer</button>
+  </form>
+</div></section>

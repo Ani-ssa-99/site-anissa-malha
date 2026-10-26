@@ -1,0 +1,16 @@
+<div class="courses">
+  {% for c in cours.formations %}
+  <article class="course rv{% if c.mis_en_avant %} feat{% endif %}">
+    <span class="lvl">{{ c.niveau }}</span>
+    <h3>{{ c.titre }}</h3>
+    {% if c.description %}<p>{{ c.description }}</p>{% endif %}
+    {% if c.points %}<ul>{% for p in c.points %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+    {% if c.duree %}<span class="dur">Durée : {{ c.duree }}</span>{% endif %}
+    <div class="foot">
+      <span class="price">{{ c.prix }}</span>
+      {% if c.lien_paiement %}<a class="pill solid" href="{{ c.lien_paiement }}" target="_blank" rel="noopener">Je réserve</a>
+      {% else %}<a class="pill solid" href="/contact/?cours={{ c.titre | urlencode }}">Je réserve</a>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

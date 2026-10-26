@@ -1,0 +1,12 @@
+---
+layout: base.njk
+title: Cours
+permalink: /cours/
+eyebrow: Cours de marketing
+---
+{% set heading = cours.titre %}{% set lead = cours.intro %}
+{% include "page-hero.njk" %}
+<section class="band sand"><div class="wrap">
+  {% include "courses.njk" %}
+  <p class="rv" style="margin-top:40px;color:var(--muted)">Une question sur un cours ou une formation sur mesure pour ton équipe ? <a href="/contact/" style="color:var(--terra);font-weight:700">Écris-moi</a>.</p>
+</div></section>

@@ -1,0 +1,88 @@
+---
+layout: base.njk
+permalink: /
+---
+<header class="hero dark">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">{{ site.metier }} · {{ site.ville }}</div>
+      <h1 data-letters aria-label="{{ site.prenom }} {{ site.nom }}">{{ site.prenom }} <em>{{ site.nom }}</em></h1>
+      <p class="rot">{{ site.phrase_debut }} <span class="word" id="word" data-words='{{ site.mots_animes | dump | safe }}'>{{ site.mots_animes[0] }}</span><span class="caret" aria-hidden="true"></span></p>
+      <p class="lead">{{ site.intro }}</p>
+      <div class="ctas">
+        <a class="pill solid" href="/contact/">Travaillons ensemble</a>
+        <a class="pill ghost" href="#parcours">Voir mon parcours</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <svg class="ring" viewBox="0 0 400 400" aria-hidden="true">
+        <defs><path id="circ" d="M200,200 m-186,0 a186,186 0 1,1 372,0 a186,186 0 1,1 -372,0"/></defs>
+        <text><textPath href="#circ">{{ site.texte_cercle }}</textPath></text>
+      </svg>
+      <div class="ph"><img src="{{ site.photo }}" alt="Portrait de {{ site.prenom }} {{ site.nom }}" width="720" height="720"></div>
+      {% if site.badge_disponible %}<span class="tag t1"><i></i>{{ site.badge_disponible }}</span>{% endif %}
+      {% if site.badge_lieu %}<span class="tag t2">{{ site.badge_lieu }}</span>{% endif %}
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  {% for c in site.competences %}<span>{{ c }}</span>{% endfor %}
+</div></div>
+
+<section class="band" id="apropos"><div class="wrap">
+  <div class="about rv">
+    <div>
+      <div class="eyebrow">À propos</div>
+      <h2 class="h2">{{ site.apropos_titre | accent | safe }}</h2>
+    </div>
+    <p>{{ site.apropos_texte }}</p>
+  </div>
+  <div class="stats rv">
+    {% for s in site.chiffres %}
+    <div class="stat"><div class="n">{{ s.avant }}<span data-count="{{ s.nombre }}">{{ s.nombre }}</span>{{ s.apres }}</div><div class="k">{{ s.legende }}</div></div>
+    {% endfor %}
+  </div>
+</div></section>
+
+<section class="band dark" id="parcours"><div class="wrap">
+  <div class="eyebrow rv">Parcours</div>
+  <h2 class="h2 rv">{{ parcours.titre | accent | safe }}</h2>
+  <div class="tl">
+    <div class="fill"></div>
+    {% for j in parcours.postes %}
+    <div class="job rv"><div class="when">{{ j.dates }}</div><div><h3>{{ j.poste }} <span>{{ j.entreprise }}</span></h3>{% if j.description %}<p>{{ j.description }}</p>{% endif %}</div></div>
+    {% endfor %}
+  </div>
+  {% if parcours.formations.length %}
+  <div class="eyebrow rv" style="margin-top:64px">Formation</div>
+  <div class="edu rv">
+    {% for f in parcours.formations %}<div><span>{{ f.dates }}</span><b>{{ f.diplome }}</b><span>{{ f.ecole }}</span></div>{% endfor %}
+  </div>
+  {% endif %}
+</div></section>
+
+<section class="band" id="portfolio"><div class="wrap">
+  <div class="eyebrow rv">Portfolio</div>
+  <h2 class="h2 rv">{{ portfolio.titre | accent | safe }}</h2>
+  <div class="works">
+    {% for p in portfolio.projets %}
+    <a class="work tilt rv" href="{{ p.lien }}" target="_blank" rel="noopener">
+      <div class="kind">{{ p.type }}</div>
+      <h3>{{ p.nom }}</h3>
+      <p>{{ p.description }}</p>
+      <span class="go">Voir le site <b>↗</b></span>
+      {% if p.tags %}<div class="chips">{% for t in p.tags %}<span>{{ t }}</span>{% endfor %}</div>{% endif %}
+      <div class="num">{{ "0" if loop.index < 10 }}{{ loop.index }}</div>
+    </a>
+    {% endfor %}
+  </div>
+</div></section>
+
+<section class="band sand" id="cours"><div class="wrap">
+  <div class="eyebrow rv">Cours</div>
+  <h2 class="h2 rv">{{ cours.titre | accent | safe }}</h2>
+  {% include "courses.njk" %}
+  <p class="rv" style="margin-top:32px"><a class="pill line" href="/cours/">Voir le détail des cours →</a></p>
+</div></section>

@@ -1,0 +1,61 @@
+{
+  "prenom": "Anissa",
+  "nom": "Malha",
+  "metier": "Cheffe de projet marketing digital",
+  "ville": "Lille",
+  "bandeau": "Ouverte à un CDI · Cheffe de projet marketing digital · Lille",
+  "badge_disponible": "Ouverte à un CDI",
+  "badge_lieu": "Basée à Lille",
+  "phrase_debut": "Je fais grandir les marques grâce à",
+  "mots_animes": [
+    "la stratégie digitale",
+    "des contenus qui convertissent",
+    "une communauté engagée",
+    "des lancements réussis"
+  ],
+  "intro": "6 ans entre le terrain, le BtoB et le marketing de marque. Aujourd'hui je cherche un CDI pour piloter des projets digitaux de A à Z, du brief jusqu'aux résultats.",
+  "photo": "/assets/img/photo.jpg",
+  "texte_cercle": "Stratégie ✦ Branding ✦ Social media ✦ E-commerce ✦ Gestion de projet ✦ Contenu ✦ ",
+  "competences": [
+    "Stratégie digitale",
+    "Brand content",
+    "Social media",
+    "E-commerce",
+    "Lancement produit",
+    "Gestion de projet",
+    "Événementiel"
+  ],
+  "apropos_titre": "Créative par nature, *carrée* par méthode.",
+  "apropos_texte": "J'ai commencé par la vente et le terrain, puis j'ai construit des marques : cosmétique chez MedSpa, communication chez Beroli, brand & digital chez Artkan. Je parle le langage des équipes créa comme celui des commerciaux, et je garde toujours un œil sur les chiffres.",
+  "chiffres": [
+    {
+      "avant": "",
+      "nombre": 6,
+      "apres": "",
+      "legende": "années d'expérience"
+    },
+    {
+      "avant": "",
+      "nombre": 5,
+      "apres": "",
+      "legende": "entreprises, du retail au BtoB"
+    },
+    {
+      "avant": "",
+      "nombre": 4,
+      "apres": "",
+      "legende": "langues parlées"
+    },
+    {
+      "avant": "Bac+",
+      "nombre": 5,
+      "apres": "",
+      "legende": "Master ICD · IGENSIA"
+    }
+  ],
+  "langues": "Français · Arabe · Turc · Anglais B2",
+  "email": "Anissa.malha@hotmail.com",
+  "linkedin": "https://www.linkedin.com/in/anissamalha/",
+  "pied_titre": "Un projet, un poste ? *Parlons-en.*",
+  "pied_texte": "Cheffe de projet marketing digital. Je construis des marques qui se remarquent, des campagnes qui convertissent et des équipes qui avancent ensemble."
+}
