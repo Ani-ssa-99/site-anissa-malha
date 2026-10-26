@@ -244,3 +244,8 @@ form.card textarea{min-height:130px;resize:vertical}
   .rv.pre{transform:none;opacity:1}
 }
 .band > .wrap > :first-child{margin-top:0}
+
+/* bouton espace client dans le menu */
+.links .pill.account{padding:9px 18px}
+.links .pill.account svg{flex:none}
+@media (max-width:900px){.links .pill.account{margin-top:14px;justify-content:center}}
