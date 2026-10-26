@@ -27,7 +27,7 @@
   <div class="links" id="links">
     {% set menu = [["Accueil","/"],["Blog","/blog/"],["Cours","/cours/"],["Astuces","/astuces/"]] %}
     {% for item in menu %}<a href="{{ item[1] }}"{% if page.url == item[1] %} aria-current="page"{% endif %}>{{ item[0] }}</a>{% endfor %}
-    {% if site.espace_client_url %}<a class="pill ghost account" href="{{ site.espace_client_url }}" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>{{ site.espace_client_texte or "Espace client" }}</a>{% endif %}
+    <a class="pill ghost account" href="{{ site.espace_client_url or '/espace-client/' }}" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>{{ site.espace_client_texte or "Espace client" }}</a>
     <a class="pill solid" href="/contact/">Me contacter →</a>
   </div>
 </div></nav>
@@ -55,7 +55,7 @@
     </div>
     <div>
       <div class="label">Contact</div>
-      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% if site.espace_client_url %}<br><a href="{{ site.espace_client_url }}" rel="noopener">{{ site.espace_client_texte or "Espace client" }}</a>{% endif %}<br>{{ site.ville }}<br>{{ site.langues }}</p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a><br><a href="{{ site.espace_client_url or '/espace-client/' }}" rel="noopener">{{ site.espace_client_texte or "Espace client" }}</a><br>{{ site.ville }}<br>{{ site.langues }}</p>
     </div>
   </div>
   <div class="legal"><span>© {{ "" | year }} {{ site.prenom }} {{ site.nom }} · {{ site.ville }}</span><span><a href="/admin/" rel="nofollow">Espace admin</a> · <a href="#contenu">Retour en haut ↑</a></span></div>

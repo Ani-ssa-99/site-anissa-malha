@@ -68,7 +68,7 @@ collections:
           - { label: Langues, name: langues, widget: string }
           - { label: E-mail, name: email, widget: string }
           - { label: Lien LinkedIn, name: linkedin, widget: string }
-          - { label: Lien de l'espace client (Systeme.io), name: espace_client_url, widget: string, required: false, hint: "Colle ici le lien de connexion de ton espace membre Systeme.io. Laisse vide pour masquer le bouton." }
+          - { label: Lien de l'espace client (Systeme.io), name: espace_client_url, widget: string, required: false, hint: "Colle ici le lien de connexion de ton espace membre Systeme.io. Tant que c'est vide, le bouton mène à une page « bientôt disponible »." }
           - { label: Texte du bouton espace client, name: espace_client_texte, widget: string, required: false, default: "Espace client" }
           - { label: Grand titre du pied de page, name: pied_titre, widget: string, hint: "Mets un mot entre *étoiles* pour l'écrire en italique couleur" }
           - { label: Texte du pied de page, name: pied_texte, widget: text }
