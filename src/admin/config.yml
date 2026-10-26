@@ -12,8 +12,8 @@ backend:
     deleteMedia: "Suppression de l'image « {{path}} »"
 
 locale: fr
-site_url: https://anissa-malha.netlify.app
-display_url: https://anissa-malha.netlify.app
+site_url: https://anissam.netlify.app
+display_url: https://anissam.netlify.app
 logo_url: /assets/img/logo.svg
 media_folder: src/assets/uploads
 public_folder: /assets/uploads
