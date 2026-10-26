@@ -1,6 +1,7 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.addCollection("articles", (api) =>
     api.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date)
