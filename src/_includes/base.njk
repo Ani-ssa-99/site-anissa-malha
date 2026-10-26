@@ -17,7 +17,7 @@
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <div class="progress" aria-hidden="true"></div>
-<div class="topbar">✦ {{ site.bandeau }} ✦</div>
+{% if site.bandeau %}<div class="topbar">✦ {{ site.bandeau }} ✦</div>{% endif %}
 <nav class="nav" aria-label="Menu principal"><div class="wrap" style="position:relative">
   <a class="brand" href="/" aria-label="{{ site.prenom }} {{ site.nom }}, accueil">
     <img src="/assets/img/logo.svg" alt="" width="48" height="48">

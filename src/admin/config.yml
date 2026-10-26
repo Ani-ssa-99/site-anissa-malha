@@ -45,7 +45,7 @@ collections:
           - { label: Nom, name: nom, widget: string }
           - { label: Métier, name: metier, widget: string }
           - { label: Ville, name: ville, widget: string }
-          - { label: Bandeau tout en haut du site, name: bandeau, widget: string }
+          - { label: Bandeau tout en haut du site, name: bandeau, widget: string, required: false, hint: "Laisse vide pour le masquer" }
           - { label: Pastille verte près de la photo, name: badge_disponible, widget: string, required: false, hint: "Laisse vide pour la masquer" }
           - { label: Pastille terracotta près de la photo, name: badge_lieu, widget: string, required: false }
           - { label: Photo, name: photo, widget: image }
