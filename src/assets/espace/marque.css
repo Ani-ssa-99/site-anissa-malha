@@ -1,0 +1,18 @@
+/* Habille l'espace client aux couleurs du site (chargé après espace.css). */
+:root:not([data-x]), :root[data-theme="dark"] {
+  --paper: #f7f1ea; --surface: #fffaf5; --ink: #2b1d17; --ink-2: #7a6559; --line: #e3d4c6;
+  --pine: #2b1d17; --on-pine: #f7f1ea; --on-pine-2: #d9c9bc; --plum-2: #3a2820;
+  --saffron: #a9502c; --saffron-soft: #f3dfd2; --on-acc: #f7f1ea; --focus: #a9502c;
+  --ok: #2f7a55; --warn: #a2620a; --risk: #b03a48;
+  --f-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --f-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap: 1120px; --r: 18px;
+  color-scheme: light;
+}
+body::before { background: var(--choco); }
+.btn { border-radius: 999px; }
+.ec.band { padding-block: 0; }
+/* l'en-tête et le pied de page gardent leurs propres filets et libellés */
+.nav, .footer, .topbar { --line: #5a4237; }
+.footer .label { font-family: var(--body); color: var(--peach); }

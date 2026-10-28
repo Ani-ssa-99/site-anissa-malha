@@ -2,14 +2,18 @@
 layout: base.njk
 title: Espace client
 permalink: /espace-client/
-eyebrow: Espace client
-heading: "Ton espace *arrive bientôt*."
-lead: "Bientôt, tu pourras te connecter ici pour retrouver tes cours, tes ressources et tes achats. En attendant, réserve ta place par message : je te réponds sous 48 h."
+extra_css: ["/assets/espace/espace.css", "/assets/espace/marque.css"]
+extra_js: ["https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js", "/assets/espace/espace-config.js", "/assets/espace/espace.js"]
 ---
-{% include "page-hero.njk" %}
-<section class="band"><div class="wrap">
-  <div class="ctas">
-    <a class="pill solid" href="/contact/?cours=Accès%20à%20l'espace%20client">Être prévenu·e de l'ouverture</a>
-    <a class="pill line" href="/cours/">Voir les cours</a>
+<section class="band ec"><div class="in">
+  <div class="ec-app" data-ec>
+    <p class="ec-loading">Chargement…</p>
   </div>
 </div></section>
+<!-- Formulaires cachés : Netlify t'envoie un e-mail à chaque inscription et à chaque message client. -->
+<form name="inscription-pro" data-netlify="true" netlify-honeypot="societe-web" hidden>
+  <input name="societe"><input name="siret"><input name="email"><input name="nom"><input name="telephone"><input name="siret-verifie"><input name="societe-web">
+</form>
+<form name="message-client" data-netlify="true" netlify-honeypot="societe-web" hidden>
+  <input name="societe"><input name="email"><textarea name="message"></textarea><input name="societe-web">
+</form>

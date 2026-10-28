@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Mentions légales
+permalink: /mentions-legales/
+eyebrow: Informations légales
+heading: "Mentions légales et *confidentialité*."
+---
+{% include "page-hero.njk" %}
+<section class="band"><div class="wrap"><div class="prose">
+<h2>Éditrice du site</h2>
+<p>{{ site.prenom }} {{ site.nom }}, {{ site.ville }}. Contact : <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+<h2>Hébergement</h2>
+<p>Le site est hébergé par Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
+<h2 id="confidentialite">Données personnelles</h2>
+<p>Les informations envoyées par le formulaire de contact servent uniquement à te répondre. Elles sont transmises par Netlify et ne sont ni vendues ni partagées.</p>
+<p>Si tu crées un compte dans l'espace client, ton nom, ton e-mail, ton téléphone, ta société, ton SIRET et ton Kbis sont conservés chez Supabase (serveurs en Europe). Ils servent à vérifier ton entreprise et à suivre nos projets communs. Ils sont gardés pendant la durée de notre collaboration, puis supprimés sur simple demande.</p>
+<p>Tu peux à tout moment consulter, corriger ou supprimer tes données en écrivant à <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Tu peux aussi saisir la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>.</p>
+<h2>Cookies</h2>
+<p>Le site n'utilise pas de cookies publicitaires ni de mesure d'audience. L'espace client garde seulement ta session de connexion dans ton navigateur.</p>
+</div></div></section>
